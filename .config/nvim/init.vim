@@ -1,29 +1,27 @@
 set mouse=a
-set number
+set number norelativenumber
 set encoding=utf-8
 set noswapfile
-set scrolloff=10
+set scrolloff=12
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4
 set expandtab
 set autoindent
 set fileformat=unix
-filetype indent on
 set smartindent
 set tabstop=2
-set expandtab
 set shiftwidth=2
-
-inoremap jk <esc>
+filetype indent on
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.0', 'do': 'make install_jsregexp'}
+Plug 'hrsh7th/nvim-cmp'
 Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'L3MON4D3/LuaSnip'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'morhetz/gruvbox'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
@@ -95,7 +93,7 @@ cmp.setup {
     ['<S-Tab>'] = function(fallback)
       if vim.fn.pumvisible() == 1 then
         vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true, true, true), 'n')
-      elsef luasnip.jumpable(-1) then
+      elseif luasnip.jumpable(-1) then
         vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true), '')
       else
         fallback()
@@ -153,7 +151,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- Stylelint format after save
-require'lspconfig'.stylelint_lsp.setup{
+require 'lspconfig'.stylelint_lsp.setup{
   settings = {
     stylelintplus = {
       --autoFixOnSave = true,
@@ -162,7 +160,7 @@ require'lspconfig'.stylelint_lsp.setup{
   }
 }
 
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
 
