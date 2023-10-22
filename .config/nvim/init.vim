@@ -1,5 +1,6 @@
 set mouse=a
-set number norelativenumber
+set number
+set norelativenumber
 set encoding=utf-8
 set noswapfile
 set scrolloff=12
@@ -10,9 +11,6 @@ set expandtab
 set autoindent
 set fileformat=unix
 set smartindent
-set tabstop=2
-set shiftwidth=2
-filetype indent on
 
 call plug#begin('~/.vim/plugged')
 
@@ -292,9 +290,6 @@ nnoremap <silent> <Leader>bd :Bclose<CR>
 map gn :bn<cr>
 map gp :bp<cr>
 map gw :Bclose<cr>
-
-set relativenumber
-set rnu
 
 let g:transparent_enabled = v:true
 
