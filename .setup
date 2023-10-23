@@ -16,5 +16,3 @@ ninja-build
 neovim
 bat
 ripgrep
-rebound-cli
-code
