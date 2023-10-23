@@ -15,7 +15,7 @@ set smartindent
 call plug#begin('~/.vim/plugged')
 
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
+Plug 'ray-x/lsp_signature.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.0', 'do': 'make install_jsregexp'}
 Plug 'hrsh7th/nvim-cmp'
