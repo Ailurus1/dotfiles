@@ -40,4 +40,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export STARSHIP_CACHE=~/.starship/cache
 
