@@ -17,16 +17,19 @@ HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+shopt -s checkwinsizey
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# Alias definitions.
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    source ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_functions ]; then
+    source ~/.bash_functions
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -40,6 +43,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# export STARSHIP_CONFIG=~/.config/starship/starship.toml
-# export STARSHIP_CACHE=~/.starship/cache
 
