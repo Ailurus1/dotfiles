@@ -4,6 +4,7 @@
 !.bash_aliases
 !.gitignore
 !.config/nvim/
+!.config/starship
 !.setup
 !scripts/
 !.bash_functions
