@@ -1,0 +1,14 @@
+[/]
+background-color='#303446'
+cursor-background-color='#f2d5cf'
+cursor-colors-set=true
+cursor-foreground-color='#303446'
+foreground-color='#c6d0f5'
+highlight-background-color='#f2d5cf'
+highlight-colors-set=true
+highlight-foreground-color='#626880'
+login-shell=false
+palette=['#51576d', '#e78284', '#a6d189', '#e5c890', '#8caaee', '#f4b8e4', '#81c8be', '#b5bfe2', '#626880', '#e78284', '#a6d189', '#e5c890', '#8caaee', '#f4b8e4', '#81c8be', '#a5adce']
+use-custom-command=false
+use-theme-colors=false
+visible-name='Catppuccin Frappe'
