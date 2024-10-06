@@ -1,24 +1,23 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
 $battery\
-$username\
-$hostname\
 $directory\
-$git_branch\
-$git_state\
-$git_status\
+$git_branch \
 $cmd_duration\
 $line_break\
+$username@$hostname \
 $character"""
 
 palette = "catppuccin_frappe"
 
 [character]
-success_symbol = "[❯](peach)"
-error_symbol = "[❯](peach)"
+success_symbol = "[~ %](rosewater)"
+error_symbol = "[~ %](maroon)"
+
 
 [directory]
 disabled = false
-style = "bold lavender"
 truncate_to_repo = false
 
 [battery]
@@ -54,9 +53,21 @@ base = "#303446"
 mantle = "#292c3c"
 crust = "#232634"
 
+[username]
+style_user = "bold dimmed pink"
+show_always = true
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+detect_env_vars = ['!TMUX', 'SSH_CONNECTION']
+disabled = false
+style = "bold dimmed pink"
+format = "[$hostname]($style)"
+
 [git_branch]
 format = "[$branch]($style)"
-style = "bold mauve"
+style = "bold teal"
 
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](bright-black) ($ahead_behind$stashed)]($style)"
